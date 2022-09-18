@@ -20,7 +20,6 @@ nav ul {
 }
 
 .game-container {
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     margin: 50px 0px 0px 0px;
@@ -30,10 +29,11 @@ nav ul {
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
+    position: relative;
 }
 
 .box {
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(91, 90, 90);
     font-size: 7vw;
     display: flex;
     justify-content: center;
@@ -49,8 +49,8 @@ nav ul {
 }
 
 .img-box img {
-    height: 250px;
-    display: none;
+    width: 0;
+    transition: width is ease-in-out;
 }
 
 .br-0 {
@@ -86,4 +86,22 @@ nav ul {
 
 #reset:hover {
     background-color: rgb(88, 88, 228);
+}
+
+.line {
+    background-color: rgb(178, 223, 129, 0.8);
+    position: absolute;
+    height: 25px;
+    border-radius: 50px;
+    width: 0vw;
+    transition: width is ease-in-out;
+}
+
+@media screen and (max-width: 744px) {
+    .game-container {
+        flex-wrap: wrap;
+    }
+    .game-info {
+        margin-top: 50px;
+    }
 }
